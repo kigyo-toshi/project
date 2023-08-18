@@ -535,7 +535,7 @@ main p{
     text-align: center;
   }
   footer .logo{
-    width: 70vw;
+    height: 50px;
     position: relative;
     top: 30px;
   }
