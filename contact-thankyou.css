@@ -200,15 +200,15 @@ header .p p{
   header .header-768{
     background: #1f1f1f;
     width: 100%;
-    height: 120px;
+    height: 60px;
     position: fixed;
     z-index: 100;
   }
   header .header-768 .logo{
-    padding: 20px;
-    height: 80px;
+    padding: 10px;
+    height: 40px;
     position: absolute;
-    left: 3vw;
+    left: 2vw;
     z-index: 100;
   }
   .drawer_hidden {
@@ -222,26 +222,26 @@ header .header-768 .drawer_open {
   right: 7%;
   z-index: 100;
   cursor: pointer;
-  padding: 5px;
-  height: 120px;
+  padding: 0px;
+  height: 60px;
 }
 .drawer_open span,
 .drawer_open span:before,
 .drawer_open span:after {
   content: '';
   display: block;
-  height: 5px;
-  width: 60px;
-  border-radius: 3px;
+  height: 2px;
+  width: 30px;
+  border-radius: 0px;
   background: #fff;
   transition: 0.5s;
   position: absolute;
 }
 .drawer_open span:before {
-  bottom: 20px;
+  bottom: 10px;
 }
 .drawer_open span:after {
-  top: 20px;
+  top: 10px;
 }
 #drawer_input:checked ~ .drawer_open span {
   background: rgba(255, 255, 255, 0);
@@ -256,7 +256,7 @@ header .header-768 .drawer_open {
 }
 header .nav_content {
   width: 100%;
-  height: 1000px;
+  height: 500px;
   position: fixed;
   bottom: 100%;
   z-index: 99;
@@ -272,15 +272,15 @@ header .p{
   text-align: center;
 }
 header .p p{
-  font-size: 22px;
+  font-size: 10px;
   font-family: Arial;
-  padding-top: 950px;
+  padding-top: 450px;
   color: #fff;
 }
   header .header-768 .bar{
     position: absolute;
     left: 15vw;
-    top: 100px;
+    top: 50px;
     padding-top: 20px;
   }
   header .header-768 .bar ul{
@@ -288,14 +288,14 @@ header .p p{
   }
   header .header-768 .bar li{
     list-style:none;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   header .header-768 .bar a{
     color: #FFF;
     text-decoration: none;
     font-family: Arial;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 5;
     position: relative;
   }
@@ -305,8 +305,8 @@ header .p p{
   header .header-768 .sns{
      display: flex;
      position: absolute;
-     top: 110px;
-     right: 10vw;
+     top: 40px;
+     right: 5vw;
    }
   header .header-768 .sns ul{
     padding-left:0
@@ -315,10 +315,10 @@ header .p p{
     list-style:none;
   }
   header .header-768 .sns li img{
-    height: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 65px;
+    height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 55px;
   }
   header .header-1200{
     display: none;
@@ -530,17 +530,17 @@ main p{
 @media screen and (max-width:1067.98px){
   footer{
     width: 100vw;
-    height: 1000px;
+    height: 500px;
     background-color: #1f1f1f;
     text-align: center;
   }
   footer .logo{
     width: 70vw;
     position: relative;
-    top: 50px;
+    top: 30px;
   }
   footer .bar{
-    padding-top: 100px;
+    padding-top: 60px;
     width: 100%;
   }
   footer .bar ul{
@@ -549,21 +549,21 @@ main p{
   }
   footer .bar li{
     list-style:none;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
   footer .bar a{
     text-align: center;
     color: white;
     text-decoration: none;
     font-family: Arial;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 5;
   }
   footer .line{
     display: none;
   }
   footer .sns{
-    padding-top: 40px;
+    padding-top: 0px;
     text-align: center;
     width: 100%;
   }
@@ -574,15 +574,15 @@ main p{
     list-style:none;
   }
   footer .sns li img{
-    height: 40px;
+    height: 23px;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 
   }
   footer .sns p{
     color: #fff;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 10px;
   }
 }
