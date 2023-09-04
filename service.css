@@ -356,6 +356,15 @@ main p{
   letter-spacing: 2px;
   width: 80%;
 }
+main a{
+  color: #afafaf;
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-left: 10vw;
+  padding: 10px;
+  letter-spacing: 2px;
+  width: 80%;
+}
 @media screen and (max-width:1067.98px){
   main h1{
     font-size: 25px;
