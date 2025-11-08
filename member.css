@@ -463,7 +463,7 @@ main h5 {
         padding-top: 70px;
     }
 
-    main h2 {
+    main h2:not(.year) {
         padding-left: 200px;
         font-size: 20px;
         margin-bottom: 10px;
@@ -488,7 +488,7 @@ main h5 {
         /*color: red;*/
     }
 
-    main p {
+    main p :not(.com_so) {
         padding-left: 200px;
         padding-right: 200px;
         font-size: 16px;
@@ -609,7 +609,7 @@ main h5 {
         padding-top: 60px;
     }
 
-    main h2 {
+    main h2:not(.year) {
         padding: 20px;
         /*padding-left: 40px;*/
         font-size: 20px;
