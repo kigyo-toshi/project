@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <title>早稲田大学高等学院「起業・投資プロジェクト」</title>
@@ -11,35 +12,184 @@
     <meta property="og:url" content="https://kigyo-toshi.github.io/project/" />
     <meta property="og:image" content="img/logo-aikon.svg" />
     <meta property="og:site_name" content="早稲田大学高等学院「起業・投資プロジェクト」" />
-    <meta property="og:locale" content="ja_JP"  />
+    <meta property="og:locale" content="ja_JP" />
     <meta name="google-site-verification" content="TbRqn5v3PvmMSv26dK8JDknLanCMCCtT52aArHqAwNM" />
     <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="accordtion.css">
 </head>
+
 <body>
-<header>
-    <section class="header-1200">
+    <header>
+        <section class="header-1200">
+            <a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>
+            <ul class="bar">
+                <li><a href="content.html">活動内容</a></li>
+                <li><a href="achievement.html">活動実績</a></li>
+                <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
+                <li><a href="information.html">プロジェクト情報</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <ul class="sns">
+                <li><a href="https://instagram.com/kigyo.toshi?igshid=YTQwZjQ0NmI0OA=="><img
+                            src="img/instagram.png"></a></li>
+                <li><a href="https://x.com/kigyo_toshi"><img src="img/twitter.png"></a></li>
+                <li>
+                    <a href="https://note.com/kigyo_toshi">
+                        <img src="img/note.png">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="header-768">
+            <a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>
+            <div class="nav">
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <nav class="nav_content">
+                    <ul class="bar">
+                        <li><a href="content.html">活動内容</a></li>
+                        <li><a href="achievement.html">活動実績</a></li>
+                        <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
+                        <li><a href="information.html">プロジェクト情報</a></li>
+                        <li><a href="faq.html">よくある質問</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                    <!-- <ul class="sns">
+                        <li>
+                            <a href="https://instagram.com/kigyo.toshi?igshid=MmIzYWVlNDQ5Yg==">
+                                <img src="img/instagram.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/kigyo_toshi">
+                                <img src="img/twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://note.com/kigyo_toshi">
+                                <img src="img/note.png">
+                            </a>
+                        </li>
+                    </ul> -->
+                    <div class="p">
+                        <p>© 2023-2025 Startup and Investment Project. All Rights Reserved.</p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <h1 id="fqa_title"><u>よくあるご質問</u></h1>
+
+
+
+        <div class="accordion" role="list">
+            <div class="accordion-item" role="listitem">
+                <button type="button" id="acc-btn-1" class="accordion-btn" aria-expanded="false"
+                    aria-controls="acc-panel-1">
+                    <b>Q１　そもそも、プロジェクト活動とはなんですか？</b>
+                </button>
+                <div id="acc-panel-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" hidden>
+                    A１: 学院のプロジェクト活動とは、従来の部活動・同窓会の枠を越えて、学院生が自主的に立ち上げて運営する公認活動のことです。
+                </div>
+            </div>
+
+            <div class="accordion-item" role="listitem">
+                <button type="button" id="acc-btn-2" class="accordion-btn" aria-expanded="false"
+                    aria-controls="acc-panel-2">
+                    <b>Q２　普段このプロジェクトは何をしていますか？</b>
+                </button>
+                <div id="acc-panel-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" hidden>
+                    A２: 主に、起業や投資に関する知識習得、ビジネスプランの構築、企業訪問、学院生に向けたイベントの開催、コンテスト・大会への出場などを行っています。<a
+                        href="content.html">くわしくはこちらをご覧ください</a>
+                </div>
+            </div>
+
+            <!--        <div class="accordion-item" role="listitem">-->
+            <!--            <button type="button" id="acc-btn-2" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-2">-->
+            <!--                Q２　実際に学生起業する人いますか？-->
+            <!--            </button>-->
+            <!--            <div id="acc-panel-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" hidden>-->
+            <!--                A２：-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <!--        <div class="accordion-item" role="listitem">-->
+            <!--            <button type="button" id="acc-btn-3" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-3">-->
+            <!--                Q３　どのような人におすすめできますか？-->
+            <!--            </button>-->
+            <!--            <div id="acc-panel-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" hidden>-->
+            <!--                A３：-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <div class="accordion-item" role="listitem">
+                <button type="button" id="acc-btn-3" class="accordion-btn" aria-expanded="false"
+                    aria-controls="acc-panel-3">
+                    <b>Q３　どのくらいの忙しさですか？</b>
+                </button>
+                <div id="acc-panel-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" hidden>
+                    A３：参加具合に寄ります。すべての活動に参加したら当然忙しくはなりますが、自分の予定に合わせて調整して参加しているメンバーが多いです。
+                </div>
+            </div>
+
+            <!--        <div class="accordion-item" role="listitem">-->
+            <!--            <button type="button" id="acc-btn-4" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-4">-->
+            <!--                Q４　運動部との兼部も可能ですか？-->
+
+            <!--            </button>-->
+            <!--            <div id="acc-panel-4" class="accordion-content" role="region" aria-labelledby="acc-btn-4" hidden>-->
+            <!--                A４：-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <!--        <div class="accordion-item" role="listitem">-->
+            <!--            <button type="button" id="acc-btn-5" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-5">-->
+            <!--                Q５　-->
+            <!--            </button>-->
+            <!--            <div id="acc-panel-5" class="accordion-content" role="region" aria-labelledby="acc-btn-5" hidden>-->
+            <!--                A５：-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <!--        <div class="accordion-item" role="listitem">-->
+            <!--            <button type="button" id="acc-btn-6" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-6">-->
+            <!--                Q６　資格勉強もできますか？-->
+            <!--            </button>-->
+            <!--            <div id="acc-panel-6" class="accordion-content" role="region" aria-labelledby="acc-btn-5" hidden>-->
+            <!--                A６：-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--        <div class="accordion-item" role="listitem">-->
+            <!--            <button type="button" id="acc-btn-7" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-7">-->
+            <!--                Q７　卒業後はどのような道に進む人が多いですか？-->
+            <!--            </button>-->
+            <!--            <div id="acc-panel-7" class="accordion-content" role="region" aria-labelledby="acc-btn-7" hidden>-->
+            <!--                A７：-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+
+
+
+        </div>
+    </main>
+
+
+
+
+
+
+    <aside class="">
+
+    </aside>
+    <footer>
         <a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>
-        <ul class="bar">
-            <li><a href="content.html">活動内容</a></li>
-            <li><a href="achievement.html">活動実績</a></li>
-            <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
-            <li><a href="information.html">プロジェクト情報</a></li>
-            <li><a href="faq.html">よくある質問</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-        <ul class="sns">
-            <li><a href="https://instagram.com/kigyo.toshi?igshid=YTQwZjQ0NmI0OA=="><img src="img/instagram.png"></a></li>
-            <li><a href="https://x.com/kigyo_toshi"><img src="img/twitter.png"></a></li>
-        </ul>
-    </section>
-    <section class="header-768">
-        <a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>
-        <div class="nav">
-            <input id="drawer_input" class="drawer_hidden" type="checkbox">
-            <label for="drawer_input" class="drawer_open"><span></span></label>
-            <nav class="nav_content">
-                <ul class="bar">
+        <div class="menu">
+            <div class="bar">
+                <ul class>
                     <li><a href="content.html">活動内容</a></li>
                     <li><a href="achievement.html">活動実績</a></li>
                     <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
@@ -47,6 +197,9 @@
                     <li><a href="faq.html">よくある質問</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
                 </ul>
+            </div>
+            <div class="line"></div>
+            <div class="sns">
                 <ul class="sns">
                     <li>
                         <a href="https://instagram.com/kigyo.toshi?igshid=MmIzYWVlNDQ5Yg==">
@@ -64,176 +217,37 @@
                         </a>
                     </li>
                 </ul>
-                <div class="p">
-                    <p>© 2023-2025 Startup and Investment Project. All Rights Reserved.</p>
-                </div>
-            </nav>
-        </div>
-    </section>
-</header>
-
-<main>
-    <h1 id="fqa_title"><u>よくあるご質問</u></h1>
-
-
-
-    <div class="accordion" role="list">
-        <div class="accordion-item" role="listitem">
-            <button type="button" id="acc-btn-1" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-1">
-                <b>Q１　そもそも、プロジェクト活動とはなんですか？</b>
-            </button>
-            <div id="acc-panel-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" hidden>
-                A１: 学院のプロジェクト活動とは、従来の部活動・同窓会の枠を越えて、学院生が自主的に立ち上げて運営する公認活動のことです。
+                <p>© 2023-2025 Startup and Investment Project. All Rights Reserved.</p>
             </div>
         </div>
+    </footer>
+    <script>
+        // Accordion: ARIAと表示状態を同期
+        document.querySelectorAll('.accordion-btn').forEach((btn) => {
+            const panelId = btn.getAttribute('aria-controls');
+            const panel = document.getElementById(panelId);
 
-        <div class="accordion-item" role="listitem">
-            <button type="button" id="acc-btn-2" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-2">
-                <b>Q２　普段このプロジェクトは何をしていますか？</b>
-            </button>
-            <div id="acc-panel-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" hidden>
-                A２: 主に、起業や投資に関する知識習得、ビジネスプランの構築、企業訪問、学院生に向けたイベントの開催、コンテスト・大会への出場などを行っています。<a href="content.html">くわしくはこちらをご覧ください</a>
-            </div>
-        </div>
+            // 初期同期
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            if (!expanded) panel.setAttribute('hidden', '');
 
-        <!--        <div class="accordion-item" role="listitem">-->
-        <!--            <button type="button" id="acc-btn-2" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-2">-->
-        <!--                Q２　実際に学生起業する人いますか？-->
-        <!--            </button>-->
-        <!--            <div id="acc-panel-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" hidden>-->
-        <!--                A２：-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="accordion-item" role="listitem">-->
-        <!--            <button type="button" id="acc-btn-3" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-3">-->
-        <!--                Q３　どのような人におすすめできますか？-->
-        <!--            </button>-->
-        <!--            <div id="acc-panel-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" hidden>-->
-        <!--                A３：-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <div class="accordion-item" role="listitem">
-            <button type="button" id="acc-btn-3" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-3">
-                <b>Q３　どのくらいの忙しさですか？</b>
-            </button>
-            <div id="acc-panel-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" hidden>
-                A３：参加具合に寄ります。すべての活動に参加したら当然忙しくはなりますが、自分の予定に合わせて調整して参加しているメンバーが多いです。
-            </div>
-        </div>
-
-        <!--        <div class="accordion-item" role="listitem">-->
-        <!--            <button type="button" id="acc-btn-4" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-4">-->
-        <!--                Q４　運動部との兼部も可能ですか？-->
-
-        <!--            </button>-->
-        <!--            <div id="acc-panel-4" class="accordion-content" role="region" aria-labelledby="acc-btn-4" hidden>-->
-        <!--                A４：-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="accordion-item" role="listitem">-->
-        <!--            <button type="button" id="acc-btn-5" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-5">-->
-        <!--                Q５　-->
-        <!--            </button>-->
-        <!--            <div id="acc-panel-5" class="accordion-content" role="region" aria-labelledby="acc-btn-5" hidden>-->
-        <!--                A５：-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="accordion-item" role="listitem">-->
-        <!--            <button type="button" id="acc-btn-6" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-6">-->
-        <!--                Q６　資格勉強もできますか？-->
-        <!--            </button>-->
-        <!--            <div id="acc-panel-6" class="accordion-content" role="region" aria-labelledby="acc-btn-5" hidden>-->
-        <!--                A６：-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--        <div class="accordion-item" role="listitem">-->
-        <!--            <button type="button" id="acc-btn-7" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-7">-->
-        <!--                Q７　卒業後はどのような道に進む人が多いですか？-->
-        <!--            </button>-->
-        <!--            <div id="acc-panel-7" class="accordion-content" role="region" aria-labelledby="acc-btn-7" hidden>-->
-        <!--                A７：-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-
-
-
-    </div>
-</main>
-
-
-
-
-
-
-<aside class="">
-
-</aside>
-<footer>
-    <a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>
-    <div class="menu">
-        <div class="bar">
-            <ul class>
-                <li><a href="content.html">活動内容</a></li>
-                <li><a href="achievement.html">活動実績</a></li>
-                <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
-                <li><a href="information.html">プロジェクト情報</a></li>
-                <li><a href="faq.html">よくある質問</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </div>
-        <div class="line"></div>
-        <div class="sns">
-            <ul class="sns">
-                <li>
-                    <a href="https://instagram.com/kigyo.toshi?igshid=MmIzYWVlNDQ5Yg==">
-                        <img src="img/instagram.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/kigyo_toshi">
-                        <img src="img/twitter.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://note.com/kigyo_toshi">
-                        <img src="img/note.png">
-                    </a>
-                </li>
-            </ul>
-            <p>© 2023-2025 Startup and Investment Project. All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
-<script>
-    // Accordion: ARIAと表示状態を同期
-    document.querySelectorAll('.accordion-btn').forEach((btn) => {
-        const panelId = btn.getAttribute('aria-controls');
-        const panel = document.getElementById(panelId);
-
-        // 初期同期
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        if (!expanded) panel.setAttribute('hidden', '');
-
-        btn.addEventListener('click', () => {
-            const isOpen = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', String(!isOpen));
-            if (isOpen) {
-                panel.setAttribute('hidden', '');
-                panel.classList.remove('open');
-            } else {
-                panel.removeAttribute('hidden');
-                panel.classList.add('open');
-            }
+            btn.addEventListener('click', () => {
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                if (isOpen) {
+                    panel.setAttribute('hidden', '');
+                    panel.classList.remove('open');
+                } else {
+                    panel.removeAttribute('hidden');
+                    panel.classList.add('open');
+                }
+            });
         });
-    });
-</script>
+    </script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
