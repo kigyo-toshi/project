@@ -616,8 +616,15 @@ main h5 {
         /*margin-bottom: 10px;*/
     }
 
-    main p {
+    main p :not(.com_so) {
         padding-left: 40px;
+        padding-right: 40px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+
+    main p .com_so {
         padding-right: 40px;
         font-size: 15px;
         letter-spacing: 2px;
