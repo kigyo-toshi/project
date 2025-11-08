@@ -545,7 +545,7 @@ main h5 {
 
     main h2 {
         /*padding: 30px;*/
-        padding-left: 200px;
+        /* padding-left: 200px; */
         font-size: 20px;
         margin-bottom: 40px;
     }
@@ -577,7 +577,7 @@ main h5 {
 
     main p:not(.sentence p) {
         padding-left: 200px;
-        padding-right: 200px;
+        /* padding-right: 200px; */
         font-size: 18px;
         letter-spacing: 2px;
         line-height: 50px;
