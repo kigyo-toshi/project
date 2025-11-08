@@ -161,8 +161,8 @@ header .p p{
     font-family: Arial;
     font-size: 16px;
     font-weight: 5;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
+    /*padding-left: 2.5vw;*/
+    padding-right: 2vw;
     position: relative;
   }
   header .header-768 .bar li a:hover{
@@ -326,52 +326,190 @@ header .p p{
 }
 main{
   background-color: #2f2f2f;
-  padding-bottom: 20vh;
 }
-main h1{
-  text-align: center;
-  font-family: serif;
-  font-size: 30px;
-  color: white;
-  letter-spacing: 6px;
-  padding-bottom: 100px;
-  padding-top: 180px;
+main .firstview{
+  width: 100%;
+  height: auto;
 }
 main h2{
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
   font-family: serif;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  padding: 10px;
-  letter-spacing: 4px;
+  color: #afafaf;
 }
 main p{
-  color: #afafaf;
-  font-size: 15px;
+  color: #fff;
   font-family: sans-serif;
-  margin-left: 10vw;
-  padding: 10px;
-  letter-spacing: 2px;
-  width: 80%;
 }
 main a{
-  color: #afafaf;
-  font-size: 15px;
+  color: #fff;
   font-family: sans-serif;
-  margin-left: 10vw;
-  padding: 10px;
-  letter-spacing: 2px;
-  width: 80%;
 }
-@media screen and (max-width:1067.98px){
-  main h1{
-    font-size: 25px;
-    padding-top: 130px;
+main h3{
+  color: #afafaf;
+  font-family: serif;
+  font-size: 18px;
+}
+main h4{
+  color: #fff;
+  font-family: serif;
+  font-size: 22px;
+  padding-top: 30px;
+}
+
+main .kanyuu{
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+@media screen and (min-width:1400px){
+  main{
+    padding-top: 70px;
+  }
+  main h2{
+    padding: 50px;
+    padding-left: 200px;
+    font-size: 20px;
+  }
+  main h3{
+    font-size: 18px;
+    padding-left: 60px;
+  }
+  main h4{
+    font-size: 22px;
+    padding-top: 30px;
+    padding-left: 60px;
+  }
+  main p{
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 50px;
+  }
+  main a{
+    padding-left: 200px;
+  }
+  main .member .suzukidaiki{
+    width: 25vw;
+    height: auto;
+    padding-left: 200px;
+  }
+  main .jikoshoukai{
+    color: #afafaf;
+    font-family: sans-serif;
+    padding-left: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  main .member2{
+    display: flex;
+  }
+}
+@media screen and (min-width:1068px) and (max-width:1399.98px){
+  main{
+    padding-top: 60px;
+  }
+  main h2{
+    padding: 50px;
+    padding-left: 200px;
+    font-size: 20px;
+  }
+  main h3{
+    font-size: 18px;
+    padding-left: 60px;
+  }
+  main h4{
+    font-size: 22px;
+    padding-top: 30px;
+    padding-left: 60px;
+  }
+  main p{
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 50px;
+  }
+  main a{
+    padding-left: 200px;
+  }
+  main .member4{
+    padding-right: 0px;
+  }
+  main .member2{
+    display: flex;
+    padding-left: 0px;
+  }
+  main .member .suzukidaiki{
+    width: 25vw;
+    height: auto;
+    padding-left: 200px;
+  }
+  main .jikoshoukai{
+    color: #afafaf;
+    font-family: sans-serif;
+    padding-left: 60px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 }
+@media screen and (max-width:1067.98px){
+  main{
+    padding-top: 60px;
+  }
+  main h2{
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 20px;
+  }
+  main p{
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 40px;
+  }
+  main a{
+    padding-left: 40px;
+    font-size: 18px;
+  }
+  main .member4{
+    padding-right: 20px;
+  }
+  main .member2{
+    padding-left: 0px;
+    padding-bottom: 30px;
+  }
+  main h3{
+    color: #afafaf;
+    font-family: serif;
+    padding-top: 20px;
+    font-size: 15px;
+    padding-left: 40px;
+  }
+  main h4{
+    color: #fff;
+    font-family: serif;
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 40px;
+  }
+  main .member .suzukidaiki{
+    width: 80%;
+    height: auto;
+    padding-left: 40px;
+  }
+  main .member3{
+    width: 100%;
+  }
+  main .jikoshoukai{
+    padding-right: 40px;
+    padding-top: 20px;
+  }
+  main .kanyuu{
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
 @media screen and (min-width:1400px){
   footer{
     width: 100vw;
@@ -545,7 +683,7 @@ main a{
     top: 30px;
   }
   footer .bar{
-    padding-top: 60px;
+    padding-top: 30px;
     width: 100%;
   }
   footer .bar ul{
@@ -554,7 +692,7 @@ main a{
   }
   footer .bar li{
     list-style:none;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   footer .bar a{
     text-align: center;
@@ -582,7 +720,7 @@ main a{
     height: 23px;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 
   }
   footer .sns p{

@@ -1,0 +1,127 @@
+.accordion {
+    max-width: 900px;
+    margin: 24px auto 40px;
+    display: grid;
+    gap: 12px;
+    padding: 0 16px;
+}
+
+.accordion-item {
+    display: grid;
+    gap: 3px;
+}
+
+/* ボタン部分 */
+.accordion-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #000000;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #fff8f8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+
+/* ホバー・アクティブ時 */
+.accordion-btn:hover {
+    /* background: #f2f5fa; */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-0.1vw);
+    transition: transform 0.2s ease;
+    /*transform: translateY(-1px);*/
+}
+
+.accordion-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* アクセシビリティ対応 */
+.accordion-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(66, 135, 245, 0.25);
+}
+
+/* 右側の開閉アイコン */
+.accordion-btn::after {
+    content: "+";
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 12px;
+    transition: transform 0.2s ease;
+    color: #333;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* 開いたとき */
+.accordion-btn[aria-expanded="true"] {
+    /* background: #f0f4fa;
+    border-color: #d8e0f0; */
+}
+
+.accordion-btn[aria-expanded="true"]::after {
+    content: "−";
+}
+
+/* コンテンツ部分 */
+.accordion-content {
+    padding: 16px 20px;
+    background: #000000;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    color: #fffbfb;
+    line-height: 1.8;
+}
+
+/* hidden属性の確実なサポート */
+.accordion-content[hidden] {
+    display: none !important;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .accordion {
+        gap: 10px;
+        margin: 20px auto 36px;
+    }
+
+    .accordion-btn {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .accordion-content {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion {
+        gap: 8px;
+        padding: 0 12px;
+    }
+
+    .accordion-btn {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .accordion-content {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}

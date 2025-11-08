@@ -14,7 +14,8 @@
   <meta property="og:site_name" content="早稲田大学高等学院「起業・投資プロジェクト」" />
   <meta property="og:locale" content="ja_JP" />
   <meta name="google-site-verification" content="TbRqn5v3PvmMSv26dK8JDknLanCMCCtT52aArHqAwNM" />
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="accordtion.css">
 </head>
 
 <body>
@@ -41,12 +42,12 @@
         <label for="drawer_input" class="drawer_open"><span></span></label>
         <nav class="nav_content">
           <ul class="bar">
-            <<li><a href="content.html">活動内容</a></li>
-              <li><a href="achievement.html">活動実績</a></li>
-              <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
-              <li><a href="information.html">プロジェクト情報</a></li>
-              <li><a href="faq.html">よくある質問</a></li>
-              <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="content.html">活動内容</a></li>
+            <li><a href="achievement.html">活動実績</a></li>
+            <li><a href="member.html">メンバー紹介・先輩からのメッセージ</a></li>
+            <li><a href="information.html">プロジェクト情報</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
           </ul>
           <ul class="sns">
             <li>
@@ -59,6 +60,8 @@
                 <img src="img/twitter.png">
               </a>
             </li>
+
+
             <li>
               <a href="https://note.com/kigyo_toshi">
                 <img src="img/note.png">
@@ -72,35 +75,62 @@
       </div>
     </section>
   </header>
+
   <main>
-    <img src="img/firstview.svg" alt="" class="firstview">
-    <section>
-      <h2>About</h2>
-      <p>早稲田大学高等学院公認団体「起業・投資プロジェクト」。学院に経済教育を根付かせるために活動中。</p>
-    </section>
-    <section class="vision">
-      <h2>Vision</h2>
-      <p>テクノロジーの飛躍的な発展や社会問題の深刻化によって収入の得方は変化を続けてきた。
-        <br>政府は方針としてスタートアップの育成、「貯蓄から投資」などの具体策を掲げている。
-        <br>このような背景からわかるように、経済教育の必要性は高まりつつある。
-        <br><br>本プロジェクトでは、起業・投資に関心のある学院生が集まり、ビジネスプランコンテストに向けての活動や、投資の知識と実践的スキルを得る活動を行う。
-        <br>それにより、社会に出てからも応用可能な経済スキルの習得ができる環境を作ることを目標としている。
-        <br>また、起業・投資の魅力を伝えるイベントや、活動内容を公開することで、個人では中々手が出ず、身近でない起業・投資を身近で触れやすいものにすることも我々が目指すプロジェクトの形である。
-      </p>
-    </section>
-    <section class="katudou">
-      <h2>活動報告</h2>
-      <p>メンバーが活動報告を書いています。</p>
-      <a href="https://note.com/kigyo_toshi/">活動報告を見る</a>
-    </section>
-    <h2>現在メンバー募集中</h2>
-    <p>起業・投資プロジェクトのメンバーとして共に活動していく学院生を募集しています。</p>
-    <a href="contact.html">お問い合わせはここ</a>
-    <br>
-    <br>
+    <h1><u>活動内容</u></h1>
+    <div class="accordion" role="list">
+      <div class="accordion-item" role="listitem">
+        <button type="button" id="acc-btn-1" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-1">
+          １　ビジネスプラン構築を通じたスタートアップスキル習得
+        </button>
+        <div id="acc-panel-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" hidden>
+          <b><b>☞</b></b>　ビジネスプランの作成を通じて、起業に必要なスキルを身につけます。
+        </div>
+      </div>
 
+      <div class="accordion-item" role="listitem">
+        <button type="button" id="acc-btn-2" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-2">
+          ２　企業訪問
+        </button>
+        <div id="acc-panel-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" hidden>
+          <b>☞</b>　OBの協力を得て、企業訪問を実施します。
+        </div>
+      </div>
 
+      <div class="accordion-item" role="listitem">
+        <button type="button" id="acc-btn-3" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-3">
+          ３　学院生に向けたイベントの開催
+        </button>
+        <div id="acc-panel-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" hidden>
+          <b>☞</b>　学院生向けのイベントを企画・運営します。
+        </div>
+      </div>
+
+      <div class="accordion-item" role="listitem">
+        <button type="button" id="acc-btn-4" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-4">
+          ４　コンテスト・大会への出場
+        </button>
+        <div id="acc-panel-4" class="accordion-content" role="region" aria-labelledby="acc-btn-4" hidden>
+          <b>☞</b>　世界中の同世代の高校生と競い合います。また、専門家によるフィードバックを得ることで自身のビジネスプランを定期的に客観視できます。
+        </div>
+      </div>
+
+      <!--        <div class="accordion-item" role="listitem">-->
+      <!--            <button type="button" id="acc-btn-5" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-5">-->
+      <!--                ５　ビジネスコンテスト・大会への出場-->
+      <!--            </button>-->
+      <!--            <div id="acc-panel-5" class="accordion-content" role="region" aria-labelledby="acc-btn-5" hidden>-->
+      <!--                <b>☞</b>　コンテストなどに参加し、実践的な経験を積みます。-->
+      <!--            </div>-->
+      <!--        </div>-->
+    </div>
   </main>
+
+
+
+
+
+
   <aside class="">
 
   </aside>
@@ -135,11 +165,37 @@
               <img src="img/note.png">
             </a>
           </li>
+
         </ul>
         <p>© 2023-2025 Startup and Investment Project. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Accordion: ARIAと表示状態を同期
+    document.querySelectorAll('.accordion-btn').forEach((btn) => {
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+
+      // 初期同期
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (!expanded) panel.setAttribute('hidden', '');
+
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (isOpen) {
+          panel.setAttribute('hidden', '');
+          panel.classList.remove('open');
+        } else {
+          panel.removeAttribute('hidden');
+          panel.classList.add('open');
+        }
+      });
+    });
+  </script>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="script.js"></script>

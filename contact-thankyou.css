@@ -161,7 +161,7 @@ header .p p{
     font-family: Arial;
     font-size: 16px;
     font-weight: 5;
-    padding-left: 2.5vw;
+    /*padding-left: 2.5vw;*/
     padding-right: 2.5vw;
     position: relative;
   }
@@ -330,7 +330,7 @@ main{
 }
 main h2{
   padding-top: 100px;
-  padding-bottom: 180px;
+  padding-bottom: 80px;
   font-family: serif;
   font-size: 25px;
   color: #fff;
@@ -540,7 +540,7 @@ main p{
     top: 30px;
   }
   footer .bar{
-    padding-top: 60px;
+    padding-top: 30px;
     width: 100%;
   }
   footer .bar ul{
@@ -549,7 +549,7 @@ main p{
   }
   footer .bar li{
     list-style:none;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   footer .bar a{
     text-align: center;
@@ -577,7 +577,7 @@ main p{
     height: 23px;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 
   }
   footer .sns p{

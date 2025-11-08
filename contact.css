@@ -161,7 +161,7 @@ header .p p{
     font-family: Arial;
     font-size: 16px;
     font-weight: 5;
-    padding-left: 2.5vw;
+    /*padding-left: 2.5vw;*/
     padding-right: 2.5vw;
     position: relative;
   }
@@ -313,12 +313,14 @@ header .p p{
   }
   header .header-768 .sns li{
     list-style:none;
+      padding: 30px;
   }
   header .header-768 .sns li img{
     height: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 55px;
+    /*padding-left: 20px;*/
+    /*  margin-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*padding-top: 55px;*/
   }
   header .header-1200{
     display: none;
@@ -590,7 +592,7 @@ textarea.c-form__input {
     top: 30px;
   }
   footer .bar{
-    padding-top: 60px;
+    padding-top: 30px;
     width: 100%;
   }
   footer .bar ul{
@@ -599,7 +601,7 @@ textarea.c-form__input {
   }
   footer .bar li{
     list-style:none;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   footer .bar a{
     text-align: center;
@@ -627,7 +629,7 @@ textarea.c-form__input {
     height: 23px;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 
   }
   footer .sns p{
