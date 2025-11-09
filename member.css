@@ -12,37 +12,41 @@
         height: 70px;
         position: fixed;
         z-index: 100;
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
         align-items: center;
+        column-gap: clamp(1.5rem, 3vw, 4rem);
+        padding: 0 clamp(2rem, 4vw, 5rem);
+        box-sizing: border-box;
     }
 
     header .header-1200 .logo {
         height: 40px;
-        padding-left: 5vw;
+        justify-self: start;
     }
 
     header .header-1200 .bar {
         display: flex;
-        position: absolute;
-        right: 15vw;
-    }
-
-    header .header-1200 .bar ul {
-        padding-left: 0
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.75rem, 1.6vw, 2.4rem);
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     header .header-1200 .bar li {
         list-style: none;
+        white-space: nowrap;
     }
 
     header .header-1200 .bar a {
         color: #FFF;
         text-decoration: none;
         font-family: Arial;
-        font-size: 16px;
-        font-weight: 5;
-        padding-left: 2.5vw;
-        padding-right: 2.5vw;
+        font-size: clamp(14px, 1.1vw, 16px);
+        font-weight: 500;
+        padding: 0 clamp(0.75rem, 1.2vw, 1.6rem);
         position: relative;
     }
 
@@ -52,12 +56,12 @@
 
     header .header-1200 .sns {
         display: flex;
-        position: absolute;
-        right: 4vw;
-    }
-
-    header .header-1200 .sns ul {
-        padding-left: 0
+        align-items: center;
+        justify-content: flex-end;
+        gap: clamp(0.5rem, 1.5vw, 2rem);
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     header .header-1200 .sns li {
@@ -66,8 +70,8 @@
 
     header .header-1200 .sns li img {
         height: 20px;
-        padding-left: 1.5vw;
-        padding-right: 1.5vw;
+        width: auto;
+        display: block;
     }
 
     header .header-768 {

@@ -1,84 +1,109 @@
 @charset "utf-8";
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
-@media screen and (min-width:1400px){
-    header .header-1200{
+
+@media screen and (min-width:1400px) {
+    header .header-1200 {
         background: #1f1f1f;
         width: 100%;
         height: 70px;
         position: fixed;
         z-index: 100;
-        display: flex;
-        align-items:center;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        column-gap: clamp(1.5rem, 3vw, 4rem);
+        padding: 0 clamp(2rem, 4vw, 5rem);
+        box-sizing: border-box;
     }
-    header .header-1200 .logo{
+
+    header .header-1200 .logo {
         height: 40px;
-        padding-left: 5vw;
+        justify-self: start;
     }
-    header .header-1200 .bar{
+
+    header .header-1200 .bar {
         display: flex;
-        position: absolute;
-        right: 15vw;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.75rem, 1.6vw, 2.4rem);
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-    header .header-1200 .bar ul{
-        padding-left:0
+
+    header .header-1200 .bar li {
+        list-style: none;
+        white-space: nowrap;
     }
-    header .header-1200 .bar li{
-        list-style:none;
-    }
-    header .header-1200 .bar a{
+
+    header .header-1200 .bar a {
         color: #FFF;
         text-decoration: none;
         font-family: Arial;
-        font-size: 16px;
-        font-weight: 5;
-        padding-left: 2.5vw;
-        padding-right: 2.5vw;
+        font-size: clamp(14px, 1.1vw, 16px);
+        font-weight: 500;
+        padding: 0 clamp(0.75rem, 1.2vw, 1.6rem);
         position: relative;
     }
-    header .header-1200 .bar li a:hover{
+
+    header .header-1200 .bar li a:hover {
         color: #afafaf;
     }
-    header .header-1200 .sns{
+
+    header .header-1200 .sns {
         display: flex;
-        position: absolute;
-        right: 4vw;
+        align-items: center;
+        justify-content: flex-end;
+        gap: clamp(0.5rem, 1.5vw, 2rem);
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-    header .header-1200 .sns ul{
-        padding-left:0
+
+    header .header-1200 .sns ul {
+        padding-left: 0;
     }
-    header .header-1200 .sns li{
-        list-style:none;
+
+    header .header-1200 .sns li {
+        list-style: none;
     }
-    header .header-1200 .sns li img{
+
+    header .header-1200 .sns li img {
         height: 20px;
-        padding-left: 1.5vw;
-        padding-right: 1.5vw;
+        width: auto;
+        display: block;
     }
-    header .header-768{
+
+    header .header-768 {
         display: none;
     }
 }
-@media screen and (min-width:1068px) and ( max-width:1399.98px){
-    header .header-768{
+
+@media screen and (min-width:1068px) and (max-width:1399.98px) {
+    header .header-768 {
         background: #1f1f1f;
         width: 100%;
         height: 60px;
         position: fixed;
         z-index: 100;
     }
-    header .header-768 .logo{
+
+    header .header-768 .logo {
         height: 40px;
         padding-left: 5vw;
         position: absolute;
         z-index: 99;
         padding-top: 10px;
     }
+
     .drawer_hidden {
         display: none;
     }
+
     header .header-768 .drawer_open {
         display: flex;
         justify-content: center;
@@ -90,6 +115,7 @@
         padding: 10px;
         height: 40px;
     }
+
     .drawer_open span,
     .drawer_open span:before,
     .drawer_open span:after {
@@ -102,23 +128,29 @@
         transition: 0.5s;
         position: absolute;
     }
+
     .drawer_open span:before {
         bottom: 10px;
     }
+
     .drawer_open span:after {
         top: 10px;
     }
-    #drawer_input:checked ~ .drawer_open span {
+
+    #drawer_input:checked~.drawer_open span {
         background: rgba(255, 255, 255, 0);
     }
-    #drawer_input:checked ~ .drawer_open span::before {
+
+    #drawer_input:checked~.drawer_open span::before {
         bottom: 0;
         transform: rotate(45deg);
     }
-    #drawer_input:checked ~ .drawer_open span::after {
+
+    #drawer_input:checked~.drawer_open span::after {
         top: 0;
         transform: rotate(-45deg);
     }
+
     .nav_content {
         width: 100%;
         height: 500px;
@@ -129,33 +161,40 @@
         transition: .0s;
         text-align: center;
     }
-    #drawer_input:checked ~ .nav_content {
+
+    #drawer_input:checked~.nav_content {
         bottom: 10vh;
         top: 60px;
     }
-    header .p{
+
+    header .p {
         text-align: center;
     }
-    header .p p{
+
+    header .p p {
         font-size: 10px;
         font-family: Arial;
         padding-top: 450px;
         color: #fff;
     }
-    header .header-768 .bar{
+
+    header .header-768 .bar {
         display: flex;
         position: absolute;
         left: 10vw;
         top: 100px;
         padding-top: 19px;
     }
-    header .header-768 .bar ul{
-        padding-left:0
+
+    header .header-768 .bar ul {
+        padding-left: 0
     }
-    header .header-768 .bar li{
-        list-style:none;
+
+    header .header-768 .bar li {
+        list-style: none;
     }
-    header .header-768 .bar a{
+
+    header .header-768 .bar a {
         color: #FFF;
         text-decoration: none;
         font-family: Arial;
@@ -165,55 +204,66 @@
         padding-right: 2.5vw;
         position: relative;
     }
-    header .header-768 .bar li a:hover{
+
+    header .header-768 .bar li a:hover {
         color: #afafaf;
     }
-    header .header-768 .sns{
+
+    header .header-768 .sns {
         display: flex;
         position: absolute;
         top: 100px;
         right: 10vw;
     }
-    header .header-768 .sns ul{
-        padding-left:0
+
+    header .header-768 .sns ul {
+        padding-left: 0
     }
-    header .header-768 .sns li{
-        list-style:none;
+
+    header .header-768 .sns li {
+        list-style: none;
     }
-    header .header-768 .sns li img{
+
+    header .header-768 .sns li img {
         height: 20px;
         padding-left: 1.5vw;
         padding-right: 1.5vw;
         padding-top: 20px;
     }
-    header .header-768 .blank{
+
+    header .header-768 .blank {
         width: 100%;
         height: 10px;
-        background-color: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+        background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
         padding-top: 60px;
     }
-    header .header-1200{
+
+    header .header-1200 {
         display: none;
     }
 }
-@media screen and (max-width:1067.98px){
-    header .header-768{
+
+@media screen and (max-width:1067.98px) {
+    header .header-768 {
         background: #1f1f1f;
         width: 100%;
         height: 60px;
         position: fixed;
         z-index: 100;
     }
-    header .header-768 .logo{
+
+    header .header-768 .logo {
         padding: 10px;
         height: 40px;
         position: absolute;
         left: 2vw;
         z-index: 100;
     }
+
     .drawer_hidden {
         display: none;
     }
+
     header .header-768 .drawer_open {
         display: flex;
         justify-content: center;
@@ -225,6 +275,7 @@
         padding: 0px;
         height: 60px;
     }
+
     .drawer_open span,
     .drawer_open span:before,
     .drawer_open span:after {
@@ -237,23 +288,29 @@
         transition: 0.5s;
         position: absolute;
     }
+
     .drawer_open span:before {
         bottom: 10px;
     }
+
     .drawer_open span:after {
         top: 10px;
     }
-    #drawer_input:checked ~ .drawer_open span {
+
+    #drawer_input:checked~.drawer_open span {
         background: rgba(255, 255, 255, 0);
     }
-    #drawer_input:checked ~ .drawer_open span::before {
+
+    #drawer_input:checked~.drawer_open span::before {
         bottom: 0;
         transform: rotate(45deg);
     }
-    #drawer_input:checked ~ .drawer_open span::after {
+
+    #drawer_input:checked~.drawer_open span::after {
         top: 0;
         transform: rotate(-45deg);
     }
+
     header .nav_content {
         width: 100%;
         height: 500px;
@@ -264,34 +321,41 @@
         transition: .0s;
         text-align: center;
     }
-    #drawer_input:checked ~ .nav_content {
+
+    #drawer_input:checked~.nav_content {
         bottom: 10vh;
         top: 59px;
     }
-    header .p{
+
+    header .p {
         text-align: center;
     }
-    header .p p{
+
+    header .p p {
         font-size: 10px;
         font-family: Arial;
         padding-top: 450px;
         color: #fff;
     }
-    header .header-768 .bar{
+
+    header .header-768 .bar {
         position: absolute;
         left: 15vw;
         top: 50px;
         padding-top: 20px;
     }
-    header .header-768 .bar ul{
-        padding-left:0
+
+    header .header-768 .bar ul {
+        padding-left: 0
     }
-    header .header-768 .bar li{
-        list-style:none;
+
+    header .header-768 .bar li {
+        list-style: none;
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    header .header-768 .bar a{
+
+    header .header-768 .bar a {
         color: #FFF;
         text-decoration: none;
         font-family: Arial;
@@ -299,36 +363,44 @@
         font-weight: 5;
         position: relative;
     }
-    header .header-768 .bar li a:hover{
+
+    header .header-768 .bar li a:hover {
         color: #afafaf;
     }
-    header .header-768 .sns{
+
+    header .header-768 .sns {
         display: flex;
         position: absolute;
         top: 40px;
         right: 5vw;
     }
-    header .header-768 .sns ul{
-        padding-left:0
+
+    header .header-768 .sns ul {
+        padding-left: 0
     }
-    header .header-768 .sns li{
-        list-style:none;
+
+    header .header-768 .sns li {
+        list-style: none;
     }
-    header .header-768 .sns li img{
+
+    header .header-768 .sns li img {
         height: 25px;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 55px;
     }
-    header .header-1200{
+
+    header .header-1200 {
         display: none;
     }
 }
-main{
+
+main {
     background-color: #2f2f2f;
     padding-bottom: 20vh;
 }
-main h1{
+
+main h1 {
     text-align: center;
     font-family: serif;
     font-size: 30px;
@@ -337,7 +409,8 @@ main h1{
     padding-bottom: 100px;
     padding-top: 180px;
 }
-main h2{
+
+main h2 {
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -347,7 +420,8 @@ main h2{
     padding: 10px;
     letter-spacing: 4px;
 }
-main p{
+
+main p {
     color: #afafaf;
     font-size: 15px;
     font-family: sans-serif;
@@ -356,7 +430,8 @@ main p{
     letter-spacing: 2px;
     width: 80%;
 }
-main a{
+
+main a {
     color: #afafaf;
     font-size: 15px;
     font-family: sans-serif;
@@ -365,49 +440,57 @@ main a{
     letter-spacing: 2px;
     width: 80%;
 }
-@media screen and (max-width:1067.98px){
-    main h1{
+
+@media screen and (max-width:1067.98px) {
+    main h1 {
         font-size: 25px;
         padding-top: 130px;
         padding-bottom: 50px;
     }
 }
-@media screen and (min-width:1400px){
-    footer{
+
+@media screen and (min-width:1400px) {
+    footer {
         width: 100vw;
         height: 500px;
         background-color: #1f1f1f;
         display: flex;
     }
-    footer .logo{
+
+    footer .logo {
         width: 30vw;
         position: relative;
         left: 5vw;
         top: 200px;
     }
-    footer .menu{
+
+    footer .menu {
         width: 55vw;
         height: 400px;
-        background-color: rgba(0,0,0,0.2);
-        border-radius: 20px  20px 20px 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px 20px 20px 20px;
         display: flex;
         position: relative;
         top: 50px;
         left: 10vw;
     }
-    footer .bar{
+
+    footer .bar {
         padding-top: 100px;
         width: 120%;
     }
-    footer .bar ul{
-        padding-left:0;
+
+    footer .bar ul {
+        padding-left: 0;
         text-align: center;
     }
-    footer .bar li{
-        list-style:none;
+
+    footer .bar li {
+        list-style: none;
         padding-bottom: 25px;
     }
-    footer .bar a{
+
+    footer .bar a {
         text-align: center;
         color: white;
         text-decoration: none;
@@ -417,7 +500,8 @@ main a{
         padding-left: 2.5vw;
         padding-right: 2.5vw;
     }
-    footer .line{
+
+    footer .line {
         margin: 0 1rem;
         width: 1px;
         background-color: white;
@@ -425,26 +509,31 @@ main a{
         position: relative;
         top: 20%;
     }
-    footer .sns{
+
+    footer .sns {
         padding-top: 50px;
         text-align: center;
         width: 100%;
         height: 150px;
     }
-    footer .sns ul{
-        padding-left:0;
+
+    footer .sns ul {
+        padding-left: 0;
     }
-    footer .sns li{
-        list-style:none;
+
+    footer .sns li {
+        list-style: none;
     }
-    footer .sns li img{
+
+    footer .sns li img {
         height: 20px;
         padding-left: 1.5vw;
         padding-right: 1.5vw;
         padding-bottom: 40px;
 
     }
-    footer .sns p{
+
+    footer .sns p {
         color: #fff;
         font-family: Arial;
         font-size: 10px;
@@ -452,42 +541,49 @@ main a{
         top: 120px;
     }
 }
-@media screen and (min-width:1068px) and (max-width:1399.98px){
-    footer{
+
+@media screen and (min-width:1068px) and (max-width:1399.98px) {
+    footer {
         width: 100vw;
         height: 500px;
         background-color: #1f1f1f;
         display: flex;
     }
-    footer .logo{
+
+    footer .logo {
         width: 30vw;
         position: relative;
         left: 5vw;
         top: 100px;
     }
-    footer .menu{
+
+    footer .menu {
         width: 55vw;
         height: 400px;
-        background-color: rgba(0,0,0,0.2);
-        border-radius: 20px  20px 20px 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px 20px 20px 20px;
         display: flex;
         position: relative;
         top: 50px;
         left: 10vw;
     }
-    footer .bar{
+
+    footer .bar {
         padding-top: 100px;
         width: 120%;
     }
-    footer .bar ul{
-        padding-left:0;
+
+    footer .bar ul {
+        padding-left: 0;
         text-align: center;
     }
-    footer .bar li{
-        list-style:none;
+
+    footer .bar li {
+        list-style: none;
         padding-bottom: 25px;
     }
-    footer .bar a{
+
+    footer .bar a {
         text-align: center;
         color: white;
         text-decoration: none;
@@ -497,7 +593,8 @@ main a{
         padding-left: 2.5vw;
         padding-right: 2.5vw;
     }
-    footer .line{
+
+    footer .line {
         margin: 0 1rem;
         width: 1px;
         background-color: white;
@@ -505,26 +602,31 @@ main a{
         position: relative;
         top: 20%;
     }
-    footer .sns{
+
+    footer .sns {
         padding-top: 50px;
         text-align: center;
         width: 100%;
         height: 150px;
     }
-    footer .sns ul{
-        padding-left:0;
+
+    footer .sns ul {
+        padding-left: 0;
     }
-    footer .sns li{
-        list-style:none;
+
+    footer .sns li {
+        list-style: none;
     }
-    footer .sns li img{
+
+    footer .sns li img {
         height: 20px;
         padding-left: 1.5vw;
         padding-right: 1.5vw;
         padding-bottom: 40px;
 
     }
-    footer .sns p{
+
+    footer .sns p {
         color: #fff;
         font-family: Arial;
         font-size: 8px;
@@ -532,31 +634,37 @@ main a{
         top: 130px;
     }
 }
-@media screen and (max-width:1067.98px){
-    footer{
+
+@media screen and (max-width:1067.98px) {
+    footer {
         width: 100vw;
         height: 500px;
         background-color: #1f1f1f;
         text-align: center;
     }
-    footer .logo{
+
+    footer .logo {
         height: 50px;
         position: relative;
         top: 30px;
     }
-    footer .bar{
+
+    footer .bar {
         padding-top: 30px;
         width: 100%;
     }
-    footer .bar ul{
-        padding-left:0;
+
+    footer .bar ul {
+        padding-left: 0;
         text-align: center;
     }
-    footer .bar li{
-        list-style:none;
+
+    footer .bar li {
+        list-style: none;
         padding-bottom: 20px;
     }
-    footer .bar a{
+
+    footer .bar a {
         text-align: center;
         color: white;
         text-decoration: none;
@@ -564,34 +672,41 @@ main a{
         font-size: 15px;
         font-weight: 5;
     }
-    footer .line{
+
+    footer .line {
         display: none;
     }
-    footer .sns{
+
+    footer .sns {
         padding-top: 0px;
         text-align: center;
         width: 100%;
     }
-    footer .sns ul{
-        padding-left:0;
+
+    footer .sns ul {
+        padding-left: 0;
     }
-    footer .sns li{
-        list-style:none;
+
+    footer .sns li {
+        list-style: none;
     }
-    footer .sns li img{
+
+    footer .sns li img {
         height: 23px;
         padding-left: 1.5vw;
         padding-right: 1.5vw;
         padding-bottom: 20px;
 
     }
-    footer .sns p{
+
+    footer .sns p {
         color: #fff;
         font-family: Arial;
         font-size: 10px;
     }
 }
-main h2.preparation{
+
+main h2.preparation {
     text-align: center;
     font-size: 20px;
     font-weight: 700;
