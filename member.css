@@ -5,6 +5,7 @@
     margin: 0;
 }
 
+
 @media screen and (min-width:1400px) {
     header .header-1200 {
         background: #1f1f1f;
@@ -414,6 +415,7 @@
 }
 
 main {
+    align-items: center;
     background-color: #2f2f2f;
 }
 
@@ -505,7 +507,6 @@ main h5 {
         letter-spacing: 2px;
         line-height: 50px;
     }
-
 
 
     main a a_in_main {
@@ -606,7 +607,12 @@ main h5 {
         padding-top: 60px;
     }
 
-
+    main h2:not(.year) {
+        padding: 20px;
+        /*padding-left: 40px;*/
+        font-size: 20px;
+        /*margin-bottom: 10px;*/
+    }
 
     main p :not(.com_so) {
         padding-left: 40px;
@@ -963,4 +969,53 @@ main h5 {
         font-family: Arial;
         font-size: 10px;
     }
+}
+
+
+/* デフォルト（スマホなど小さい画面） */
+.member2 {
+    display: block;
+    /* 縦並び */
+    margin-bottom: 40px;
+}
+
+.member4 {
+    margin-top: 10px;
+}
+
+/* PC以上（例：幅768px以上） */
+@media screen and (min-width: 768px) {
+    .member2 {
+        display: flex;
+        flex-direction: column;
+        /* 各人を縦に並べる */
+        gap: 40px;
+        max-width: 1200px;
+        /* 横幅制限 */
+        margin: 0 auto 60px auto;
+        /* 左右中央寄せ＋下に余白 */
+        padding-left: 40px;
+        /* 両端余白 */
+        padding-right: 40px;
+    }
+
+    .member4 {
+        width: 100%;
+    }
+
+    /* h2を中央寄せ */
+    .vision h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+h6 {
+    text-align: center;
+    font-family: serif;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 6px;
+    padding-bottom: 20px;
+    padding-top: 35px;
 }
