@@ -467,12 +467,7 @@ main h5 {
         padding-top: 70px;
     }
 
-    main h2:not(.year) {
-        padding-left: 200px;
-        font-size: 20px;
-        margin-bottom: 10px;
 
-    }
 
     main h3 {
         font-size: 18px;
@@ -511,9 +506,7 @@ main h5 {
         line-height: 50px;
     }
 
-    main a:not(.a_in_main) {
-        padding-left: 200px;
-    }
+
 
     main a a_in_main {
         padding-left: 0px;
@@ -613,12 +606,7 @@ main h5 {
         padding-top: 60px;
     }
 
-    main h2:not(.year) {
-        padding: 20px;
-        /*padding-left: 40px;*/
-        font-size: 20px;
-        /*margin-bottom: 10px;*/
-    }
+
 
     main p :not(.com_so) {
         padding-left: 40px;

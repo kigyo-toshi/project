@@ -64,10 +64,6 @@
         padding: 0;
     }
 
-    header .header-1200 .sns ul {
-        padding-left: 0;
-    }
-
     header .header-1200 .sns li {
         list-style: none;
     }
@@ -80,6 +76,28 @@
 
     header .header-768 {
         display: none;
+    }
+}
+
+.vision {
+    h1 {
+        text-align: center;
+        font-family: serif;
+        font-size: 30px;
+        color: white;
+        letter-spacing: 6px;
+        padding-bottom: 20px;
+        padding-top: 35px;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: serif;
+        font-size: 15px;
+        color: white;
+        letter-spacing: 6px;
+        padding-bottom: 20px;
+        padding-top: 35px;
     }
 }
 
@@ -397,56 +415,298 @@
 
 main {
     background-color: #2f2f2f;
-    padding-bottom: 20vh;
 }
 
-main h1 {
-    text-align: center;
-    font-family: serif;
-    font-size: 30px;
-    color: white;
-    letter-spacing: 6px;
-    padding-bottom: 100px;
-    padding-top: 180px;
+main .firstview {
+    width: 100%;
+    height: auto;
 }
 
 main h2 {
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
     font-family: serif;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding: 10px;
-    letter-spacing: 4px;
+    color: #afafaf;
+    margin-bottom: 12px;
 }
 
 main p {
-    color: #afafaf;
-    font-size: 15px;
+    color: #fff;
     font-family: sans-serif;
-    /*margin-left: 10vw;*/
-    padding: 10px;
-    letter-spacing: 2px;
-    width: 80%;
 }
 
 main a {
-    color: #afafaf;
-    font-size: 15px;
+    color: #fff;
     font-family: sans-serif;
-    margin-left: 10vw;
-    padding: 10px;
-    letter-spacing: 2px;
-    width: 80%;
+}
+
+main h3 {
+    color: #afafaf;
+    font-family: serif;
+    font-size: 18px;
+}
+
+main h4 {
+    color: #fff;
+    font-family: serif;
+    font-size: 22px;
+    /*padding-top: 30px;*/
+}
+
+main h5 {
+    color: #fff;
+    font-family: serif;
+    font-size: 18px;
+    /*padding-top: 30px;*/
+}
+
+/*main .kanyuu{*/
+/*    padding-top: 40px;*/
+/*    padding-bottom: 80px;*/
+/*}*/
+@media screen and (min-width:1400px) {
+    main {
+        padding-top: 70px;
+    }
+
+    main h2:not(.year) {
+        padding-left: 200px;
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    main h3 {
+        font-size: 18px;
+        padding-left: 60px;
+    }
+
+    main h4 {
+        font-size: 22px;
+        padding-top: 10px;
+        padding-left: 60px;
+    }
+
+    main h5 {
+        font-size: 18px;
+        padding-top: 9px;
+        padding-left: 60px;
+        /*color: red;*/
+    }
+
+    main p :not(.com_so) {
+        padding-left: 200px;
+        padding-right: 200px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 50px;
+        color: #f4f2fa;
+
+    }
+
+    main .sentence p {
+        color: #f4f2fa;
+        padding-left: 200px;
+        padding-right: 200px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 50px;
+    }
+
+
+
+    main .member .mem_pic {
+        margin-bottom: 40px;
+        width: 25vw;
+        height: auto;
+        padding-left: 200px;
+    }
+
+    .sentence .p {
+
+        color: #afafaf;
+        font-family: sans-serif;
+        padding-left: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+    }
+
+    main .member2 {
+        display: flex;
+    }
+}
+
+@media screen and (min-width:1068px) and (max-width:1399.98px) {
+    main {
+        padding-top: 60px;
+    }
+
+    main h2 {
+        /*padding: 30px;*/
+        /* padding-left: 200px; */
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    main h3 {
+        font-size: 18px;
+        padding-left: 60px;
+    }
+
+    main h4 {
+        font-size: 22px;
+        padding-top: 10px;
+        padding-left: 60px;
+    }
+
+    main h5 {
+        font-size: 18px;
+        padding-top: 9px;
+        padding-left: 60px;
+    }
+
+    main .sentence p {
+        padding-left: 60px;
+        padding-right: 200px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 50px;
+    }
+
+    main p:not(.sentence p) {
+        padding-left: 200px;
+        /* padding-right: 200px; */
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 50px;
+    }
+
+    main a:not(.kanyuu a) {
+        padding-left: 200px;
+    }
+
+    main .member4 {
+        padding-right: 0px;
+    }
+
+    main .member2 {
+        display: flex;
+        padding-left: 0px;
+    }
+
+    main .member .mem_pic {
+        margin-bottom: 40px;
+        width: 25vw;
+        height: auto;
+        padding-left: 200px;
+    }
 }
 
 @media screen and (max-width:1067.98px) {
-    main h1 {
-        font-size: 25px;
-        padding-top: 130px;
-        padding-bottom: 50px;
+    main {
+        padding-top: 60px;
     }
+
+    main h2:not(.year) {
+        padding: 20px;
+        /*padding-left: 40px;*/
+        font-size: 20px;
+        /*margin-bottom: 10px;*/
+    }
+
+    main p :not(.com_so) {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+
+    main p .com_so {
+        padding-right: 40px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+
+    main .vision p {
+        padding-left: 100px;
+
+    }
+
+    main .sentence p {
+        color: #f4f2fa;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+
+    main a {
+        /*padding-left: 40px;*/
+        font-size: 18px;
+    }
+
+    main .member4 {
+        padding-right: 20px;
+    }
+
+    main .member2 {
+        padding-left: 0px;
+        padding-bottom: 30px;
+    }
+
+    main h3 {
+        color: #afafaf;
+        font-family: serif;
+        padding-top: 20px;
+        font-size: 15px;
+        padding-left: 40px;
+    }
+
+    main h4 {
+        color: #fff;
+        font-family: serif;
+        font-size: 22px;
+        padding-top: 10px;
+        padding-left: 40px;
+    }
+
+    main h5 {
+        color: #fff;
+        font-family: serif;
+        font-size: 18px;
+        padding-top: 10px;
+        padding-left: 40px;
+    }
+
+    main .member .mem_pic {
+        margin-bottom: 40px;
+        width: 80%;
+        height: auto;
+        padding-left: 40px;
+    }
+
+    main .member3 {
+        width: 100%;
+    }
+
+    /*main .jikoshoukai{*/
+    /*    padding-right: 40px;*/
+    /*    !*padding-top: 20px;*!*/
+    /*}*/
+    /*main .kanyuu{*/
+    /*    padding-top: 20px;*/
+    /*    padding-bottom: 40px;*/
+    /*}*/
+    .kanyuu .a {
+        color: #f4f2fa;
+        padding-right: 40px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+
 }
 
 @media screen and (min-width:1400px) {
@@ -541,6 +801,8 @@ main a {
         top: 120px;
     }
 }
+
+.class-number {}
 
 @media screen and (min-width:1068px) and (max-width:1399.98px) {
     footer {
@@ -650,7 +912,7 @@ main a {
     }
 
     footer .bar {
-        padding-top: 60px;
+        padding-top: 30px;
         width: 100%;
     }
 
@@ -661,7 +923,7 @@ main a {
 
     footer .bar li {
         list-style: none;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
     }
 
     footer .bar a {
@@ -695,23 +957,15 @@ main a {
         height: 23px;
         padding-left: 1.5vw;
         padding-right: 1.5vw;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+        /*margin-bottom: 10px;*/
 
     }
+
 
     footer .sns p {
         color: #fff;
         font-family: Arial;
         font-size: 10px;
     }
-}
-
-
-.year {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
 }
