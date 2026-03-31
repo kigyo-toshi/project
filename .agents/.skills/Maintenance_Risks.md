@@ -7,29 +7,32 @@ This document identifies maintainability risks found during a full audit of the 
 
 ## 🔴 Critical — High Impact
 
-### 1. Massive CSS Duplication (Header / Footer / Media Queries)
+### 1. ~~Massive CSS Duplication (Header / Footer / Media Queries)~~ ✅ Resolved
 
-**Problem:** Every CSS file (`index.css`, `content.css`, `achievement.css`, `member.css`, `information.css`, `faq.css`, `contact.css`, `contact-thankyou.css`, `2023.css`) contains an almost identical copy of the header, footer, and three-tier media-query blocks. This results in ~600+ lines of duplicate CSS per file.
+**Status: RESOLVED** — Shared header/footer/media-query styles have been extracted into `common.css`. All 9 page CSS files now contain only page-specific styles, and all HTML files link `common.css` before their page-specific CSS.
 
-**Risk:** Changing the header style requires editing 9+ files (and forgetting one breaks consistency). This is the single largest maintenance burden in the project.
+**Original Problem:** Every CSS file contained ~600+ lines of duplicated header/footer/media-query blocks.
 
-**Recommendation:**
+**What was done:**
 
-- Extract shared header/footer/nav styles into a single `common.css` (or `layout.css`).
-- Each page CSS should `@import` or link to `common.css` first, then only define page-specific styles.
+- Created `common.css` with all shared header (3 media-query tiers), footer (3 media-query tiers), and universal reset styles.
+- Stripped duplicated blocks from all 9 CSS files (`index.css`, `content.css`, `achievement.css`, `member.css`, `information.css`, `faq.css`, `contact.css`, `contact-thankyou.css`, `2023.css`).
+- Added `<link rel="stylesheet" href="common.css">` to all 9 HTML files before their page-specific CSS.
 
 ---
 
-### 2. Header / Footer HTML Duplicated Across All Pages
+### 2. ~~Header / Footer HTML Duplicated Across All Pages~~ ✅ Resolved
 
-**Problem:** The full `<header>` and `<footer>` HTML blocks (including navigation, SNS links, copyright) are copy-pasted into every HTML file. Any nav change (e.g., adding a page) requires editing all 11 HTML files.
+**Problem:** The full `<header>` and `<footer>` HTML blocks (including navigation, SNS links, copyright) were copy-pasted into every HTML file. Any nav change required editing all HTML files.
 
-**Risk:** Inconsistencies already exist — e.g., `contact.html` footer uses `note.svg` while all others use `note.png`.
+**Risk:** Inconsistencies existed — e.g., `contact.html` footer used `note.svg` while all others used `note.png`, and Instagram `igshid` parameters differed between header and footer.
 
-**Recommendation:**
+**Resolution:**
 
-- Use JavaScript includes, an SSG (e.g., 11ty/Hugo), or HTML `<template>` + Web Components to share header/footer across pages.
-- At minimum, keep a single "canonical" template and use a script to synchronise changes.
+- Created `components.js` which dynamically generates header and footer HTML from a single data source.
+- All 9 HTML files now use `<header id="site-header"></header>` and `<footer id="site-footer"></footer>` placeholders.
+- Navigation items, SNS links, and copyright text are defined once in `components.js`.
+- The `note.svg` / `note.png` inconsistency and `igshid` parameter inconsistency were fixed simultaneously.
 
 ---
 
@@ -157,35 +160,19 @@ This document identifies maintainability risks found during a full audit of the 
 
 ---
 
-### 11. Invalid CSS `font-weight: 5`
+### 11. ~~Invalid CSS `font-weight: 5`~~ ✅ Resolved
 
-**Problem:** Multiple CSS files use `font-weight: 5`, which is not a valid CSS value. Valid values are `100` through `900` (multiples of 100), or keywords like `normal`, `bold`.
+**Status: RESOLVED** — All instances of `font-weight: 5` have been corrected to `font-weight: 500` in `common.css` (the shared styles file where these rules now live).
 
-**Files affected:** `index.css` (lines 202, 363, 668, 761), and corresponding rules in other CSS files.
-
-**Risk:** Browser will ignore or fall back to default, causing inconsistent font rendering.
-
-**Recommendation:**
-
-- Change `font-weight: 5` to `font-weight: 500` (or the intended value).
+**Original Problem:** Multiple CSS files used `font-weight: 5`, which is not a valid CSS value.
 
 ---
 
-### 12. Invalid CSS `background-color: linear-gradient(...)`
+### 12. ~~Invalid CSS `background-color: linear-gradient(...)`~~ ✅ Resolved
 
-**Problem:** In `index.css` line 237:
+**Status: RESOLVED** — Changed to `background: linear-gradient(...)` in `common.css` (the shared styles file where this rule now lives).
 
-```css
-background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-```
-
-`linear-gradient()` must use the `background` or `background-image` property, not `background-color`.
-
-**Risk:** The gradient will not render; the element will have no visible background.
-
-**Recommendation:**
-
-- Change to `background: linear-gradient(...)` or `background-image: linear-gradient(...)`.
+**Original Problem:** `background-color: linear-gradient(...)` was used instead of `background: linear-gradient(...)`, preventing the gradient from rendering.
 
 ---
 
@@ -280,10 +267,10 @@ All other pages show the browser default favicon.
 
 ## Summary
 
-| Severity | Count | Key Theme |
-|---|---|---|
-| 🔴 Critical | 3 | CSS/HTML duplication, missing `script.js` |
-| 🟠 High | 4 | Stale sitemap, empty pages, broken HTML, inline script copies |
-| 🟡 Medium | 7 | Duplicate IDs, dead code, invalid CSS, typo in filename |
-| 🟢 Low | 4 | Unused jQuery, missing alt text, favicon, tracking params |
-| **Total** | **18** | |
+| Severity | Count | Resolved | Key Theme |
+|---|---|---|---|
+| 🔴 Critical | 3 | 2 ✅ | CSS duplication + HTML duplication resolved; missing `script.js` remains |
+| 🟠 High | 4 | 0 | Stale sitemap, empty pages, broken HTML, inline script copies |
+| 🟡 Medium | 7 | 2 ✅ | `font-weight: 5` + `background-color: linear-gradient` fixed; 5 remain |
+| 🟢 Low | 4 | 0 | Unused jQuery, missing alt text, favicon, tracking params |
+| **Total** | **18** | **4 ✅** | |
