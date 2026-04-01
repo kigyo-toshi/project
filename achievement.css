@@ -432,3 +432,20 @@ main h5 {
         font-size: 18px;
     }
 }
+
+/* Placeholder Card (coming soon) */
+.placeholder-card {
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    grid-column: 1 / -1;
+}
+
+.placeholder-card .desc {
+    font-size: 16px !important;
+    color: #afafaf !important;
+    letter-spacing: 3px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+}

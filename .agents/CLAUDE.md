@@ -102,11 +102,13 @@ Every page follows:
 ### Header/Footer System
 
 Header and footer are **dynamically generated** by `components.js`:
+
 - Navigation items and SNS links are defined once in `components.js`
 - Each HTML file has `<header id="site-header"></header>` and `<footer id="site-footer"></footer>`
 - To add a nav item or SNS link, edit **only** `components.js`
 
 `components.js` generates two header variants:
+
 | Section | Selector | Visible When |
 | --- | --- | --- |
 | Desktop | `.header-1200` | Viewport ≥ 1400px |
