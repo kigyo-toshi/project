@@ -43,8 +43,25 @@ main p {
 
 @media screen and (max-width:1067.98px) {
   main h1 {
-    font-size: 25px;
-    padding-top: 130px;
-    padding-bottom: 50px;
+    font-size: 24px;
+    padding-top: 90px;
+    padding-bottom: 36px;
+    letter-spacing: 4px;
+  }
+
+  main h2 {
+    font-size: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
+    letter-spacing: 2px;
+  }
+
+  main p {
+    font-size: 14px;
+    margin-left: 24px;
+    padding: 6px 0;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    width: auto;
   }
 }

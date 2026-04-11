@@ -242,18 +242,13 @@ main h5 {
         line-height: 40px;
     }
 
-    main .vision p {
-        padding-left: 100px;
-
-    }
-
     main .sentence p {
         color: #f4f2fa;
-        padding-left: 40px;
-        padding-right: 40px;
-        font-size: 15px;
-        letter-spacing: 2px;
-        line-height: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        line-height: 1.85;
     }
 
     main a {
@@ -322,8 +317,6 @@ main h5 {
     }
 
 }
-
-.class-number {}
 
 
 /* デフォルト（スマホなど小さい画面） */

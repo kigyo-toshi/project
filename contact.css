@@ -29,9 +29,10 @@ main p {
 
 @media screen and (max-width:1067.98px) {
   main h1 {
-    font-size: 25px;
-    padding-top: 130px;
-    padding-bottom: 50px;
+    font-size: 24px;
+    padding-top: 90px;
+    padding-bottom: 36px;
+    letter-spacing: 4px;
   }
 }
 

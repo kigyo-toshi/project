@@ -277,22 +277,26 @@ main .kanyuu {
   }
 
   main h2 {
-    padding: 20px;
-    padding-left: 40px;
-    font-size: 20px;
+    padding: 16px 20px 16px 24px;
+    font-size: 19px;
   }
 
   main p {
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 15px;
-    letter-spacing: 2px;
-    line-height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.85;
   }
 
   main a {
-    padding-left: 40px;
-    font-size: 18px;
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+    letter-spacing: 0.5px;
   }
 
   main .member4 {
