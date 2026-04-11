@@ -77,9 +77,54 @@ main {
   }
 }
 
-main .firstview {
+/* ---- Firstview: shimmer → fade-in ---- */
+@keyframes shimmer-slide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes firstview-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.firstview-wrap {
+  position: relative;
+  width: 100%;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+/* シマー：画像がロードされるまで流れ続ける */
+.firstview-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+  animation: shimmer-slide 1.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ロード完了後はシマーを消す */
+.firstview-wrap:has(.loaded)::after {
+  display: none;
+}
+
+.firstview-wrap .firstview {
   width: 100%;
   height: auto;
+  display: block;
+  opacity: 0;
+}
+
+/* loaded クラスが付いたらアニメーションで表示 */
+.firstview-wrap .firstview.loaded {
+  animation: firstview-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 main h2 {

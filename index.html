@@ -25,7 +25,16 @@
       <span class="news-label">NEWS</span>
       <p>4/20(月)・4/22(水) ＠三年生棟2階ゼミ室２にて体験会を開催します！ぜひお越しください。</p>
     </div>
-    <img src="img/firstview.svg" alt="" class="firstview">
+    <div class="firstview-wrap">
+      <img src="img/firstview.svg" alt="" class="firstview" id="js-firstview">
+    </div>
+    <script>
+      (function () {
+        var img = document.getElementById('js-firstview');
+        function reveal() { img.classList.add('loaded'); }
+        if (img.complete) { reveal(); } else { img.addEventListener('load', reveal); }
+      })();
+    </script>
     <section>
       <h2>About</h2>
       <p>早稲田大学高等学院公認団体「起業・投資プロジェクト」。学院に経済教育を根付かせるために活動中。</p>
