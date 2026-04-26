@@ -10,8 +10,7 @@
 
 ## フォーム送信先
 
-Google Forms: https://docs.google.com/forms/d/e/1FAIpQLScRG04IGcZanItPzvVm0mHXQrca2dmbA9QgPkF1AFmq_KESnw/formResponse
-
+Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSdjCXfZbz62TNXXf_cgJSjrhryntMB-0T3Iu9_AHs3obZlBdg/viewform
 ## フォーム項目
 
 | 項目 | entry ID | input type | 必須 |
