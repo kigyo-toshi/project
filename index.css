@@ -1,346 +1,124 @@
 @charset "utf-8";
 
-/* ==========================================================
-   index.css — Page-specific styles for index.html
-   Shared header/footer styles are in common.css
-   ========================================================== */
-
 main {
-  background-color: #2f2f2f;
-}
-
-/* ---- News banner ---- */
-@keyframes news-glow {
-  0%, 100% { opacity: 0; }
-  50%       { opacity: 1; }
-}
-
-.news-banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: linear-gradient(90deg, #1a1a1a 0%, #252010 100%);
-  border-top: 2px solid #e8b84b;
-  border-bottom: 2px solid #e8b84b;
-  padding: 18px 32px;
-  box-sizing: border-box;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.news-banner::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  box-shadow: 0 0 18px 4px rgba(232, 184, 75, 0.4);
-  pointer-events: none;
-  animation: news-glow 2.8s ease-in-out infinite;
-}
-
-.news-banner .news-label {
-  color: #1a1a1a;
-  background-color: #e8b84b;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  padding: 4px 10px;
-  flex-shrink: 0;
-}
-
-.news-banner p {
-  color: #f5e9c8;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  line-height: 1.6;
-  padding: 0;
-  margin: 0;
-}
-
-@media screen and (max-width: 1067.98px) {
-  .news-banner {
-    padding: 14px 20px;
-    gap: 10px;
-  }
-
-  .news-banner .news-label {
-    font-size: 11px;
-  }
-
-  .news-banner p {
-    font-size: 13px;
-    letter-spacing: 1px;
-  }
-}
-
-/* ---- Firstview: shimmer → fade-in ---- */
-@keyframes shimmer-slide {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-@keyframes firstview-in {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  padding-top: 70px;
+  padding-bottom: 80px;
+  color: #fff;
+  background: #2f2f2f;
 }
 
 .firstview-wrap {
   position: relative;
   width: 100%;
-  background-color: #1a1a1a;
   overflow: hidden;
+  background: #1a1a1a;
 }
 
-/* シマー：画像がロードされるまで流れ続ける */
 .firstview-wrap::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.06) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
   animation: shimmer-slide 1.5s ease-in-out infinite;
   pointer-events: none;
 }
 
-/* ロード完了後はシマーを消す */
 .firstview-wrap:has(.loaded)::after {
   display: none;
 }
 
-.firstview-wrap .firstview {
+.firstview {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
   opacity: 0;
 }
 
-/* loaded クラスが付いたらアニメーションで表示 */
-.firstview-wrap .firstview.loaded {
-  animation: firstview-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.firstview.loaded {
+  animation: firstview-in 0.7s ease-out forwards;
+}
+
+main section {
+  width: min(1040px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-top: 64px;
 }
 
 main h2 {
+  margin-bottom: 22px;
+  color: #c3c3c3;
   font-family: serif;
-  color: #afafaf;
+  font-size: 24px;
+  letter-spacing: 0.08em;
 }
 
 main p {
   color: #fff;
   font-family: sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+main p + p {
+  margin-top: 20px;
 }
 
 main a {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 10px 18px;
   color: #fff;
   font-family: sans-serif;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-main h3 {
-  color: #afafaf;
-  font-family: serif;
-  font-size: 18px;
+main a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
 }
 
-main h4 {
-  color: #fff;
-  font-family: serif;
-  font-size: 22px;
-  padding-top: 30px;
+main a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 3px;
 }
 
-main .kanyuu {
-  padding-top: 40px;
-  padding-bottom: 80px;
+@keyframes shimmer-slide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
 }
 
-@media screen and (min-width:1400px) {
+@keyframes firstview-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1067.98px) {
   main {
-    padding-top: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  main section {
+    width: min(100% - 40px, 760px);
+    padding-top: 44px;
   }
 
   main h2 {
-    padding: 50px;
-    padding-left: 200px;
     font-size: 20px;
   }
 
-  main h3 {
-    font-size: 18px;
-    padding-left: 60px;
-  }
-
-  main h4 {
-    font-size: 22px;
-    padding-top: 30px;
-    padding-left: 60px;
-  }
-
   main p {
-    padding-left: 200px;
-    padding-right: 200px;
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 50px;
-  }
-
-  main a {
-    padding-left: 200px;
-  }
-
-  main .member .suzukidaiki {
-    width: 25vw;
-    height: auto;
-    padding-left: 200px;
-  }
-
-  main .jikoshoukai {
-    color: #afafaf;
-    font-family: sans-serif;
-    padding-left: 60px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  main .member2 {
-    display: flex;
-  }
-}
-
-@media screen and (min-width:1068px) and (max-width:1399.98px) {
-  main {
-    padding-top: 60px;
-  }
-
-  main h2 {
-    padding: 50px;
-    padding-left: 200px;
-    font-size: 20px;
-  }
-
-  main h3 {
-    font-size: 18px;
-    padding-left: 60px;
-  }
-
-  main h4 {
-    font-size: 22px;
-    padding-top: 30px;
-    padding-left: 60px;
-  }
-
-  main p {
-    padding-left: 200px;
-    padding-right: 200px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    line-height: 50px;
-  }
-
-  main a {
-    padding-left: 200px;
-  }
-
-  main .member4 {
-    padding-right: 0px;
-  }
-
-  main .member2 {
-    display: flex;
-    padding-left: 0px;
-  }
-
-  main .member .suzukidaiki {
-    width: 25vw;
-    height: auto;
-    padding-left: 200px;
-  }
-
-  main .jikoshoukai {
-    color: #afafaf;
-    font-family: sans-serif;
-    padding-left: 60px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
-
-@media screen and (max-width:1067.98px) {
-  main {
-    padding-top: 60px;
-  }
-
-  main h2 {
-    padding: 16px 20px 16px 24px;
-    font-size: 19px;
-  }
-
-  main p {
-    padding-left: 24px;
-    padding-right: 24px;
     font-size: 14px;
-    letter-spacing: 0.5px;
     line-height: 1.85;
-  }
-
-  main a {
-    display: inline-block;
-    margin-left: 24px;
-    font-size: 15px;
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 4px;
-    letter-spacing: 0.5px;
-  }
-
-  main .member4 {
-    padding-right: 20px;
-  }
-
-  main .member2 {
-    padding-left: 0px;
-    padding-bottom: 30px;
-  }
-
-  main h3 {
-    color: #afafaf;
-    font-family: serif;
-    padding-top: 20px;
-    font-size: 15px;
-    padding-left: 40px;
-  }
-
-  main h4 {
-    color: #fff;
-    font-family: serif;
-    font-size: 22px;
-    padding-top: 10px;
-    padding-left: 40px;
-  }
-
-  main .member .suzukidaiki {
-    width: 80%;
-    height: auto;
-    padding-left: 40px;
-  }
-
-  main .member3 {
-    width: 100%;
-  }
-
-  main .jikoshoukai {
-    padding-right: 40px;
-    padding-top: 20px;
-  }
-
-  main .kanyuu {
-    padding-top: 20px;
-    padding-bottom: 40px;
   }
 }

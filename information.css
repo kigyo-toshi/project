@@ -1,67 +1,76 @@
 @charset "utf-8";
 
-/* ==========================================================
-   information.css — Page-specific styles for information.html
-   Shared header/footer styles are in common.css
-   ========================================================== */
-
 main {
-  background-color: #2f2f2f;
-  padding-bottom: 20vh;
+  min-height: 60vh;
+  padding: 105px 24px 80px;
+  color: #fff;
+  background: #2f2f2f;
 }
 
 main h1 {
-  text-align: center;
+  margin-bottom: 48px;
   font-family: serif;
   font-size: 30px;
-  color: white;
   letter-spacing: 6px;
-  padding-bottom: 100px;
-  padding-top: 180px;
+  text-align: center;
 }
 
-main h2 {
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: serif;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  padding: 10px;
-  letter-spacing: 4px;
+.project-details {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
 }
 
-main p {
-  color: #afafaf;
-  font-size: 15px;
+.project-details div {
+  display: grid;
+  grid-template-columns: minmax(150px, 35%) 1fr;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-details div:last-child {
+  border-bottom: 0;
+}
+
+.project-details dt,
+.project-details dd {
+  padding: 18px 22px;
   font-family: sans-serif;
-  margin-left: 10vw;
-  padding: 10px;
-  letter-spacing: 2px;
-  width: 80%;
+  line-height: 1.6;
 }
 
-@media screen and (max-width:1067.98px) {
+.project-details dt {
+  color: #d1d1d1;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-details dd {
+  margin: 0;
+}
+
+.project-details a {
+  color: #fff;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 90px 20px 60px;
+  }
+
   main h1 {
     font-size: 24px;
-    padding-top: 90px;
-    padding-bottom: 36px;
     letter-spacing: 4px;
   }
 
-  main h2 {
-    font-size: 16px;
-    margin-left: 24px;
-    margin-right: 24px;
-    letter-spacing: 2px;
+  .project-details div {
+    grid-template-columns: 1fr;
   }
 
-  main p {
-    font-size: 14px;
-    margin-left: 24px;
-    padding: 6px 0;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
-    width: auto;
+  .project-details dt,
+  .project-details dd {
+    padding: 14px 18px;
   }
 }

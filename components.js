@@ -11,7 +11,7 @@
 (function () {
   'use strict';
 
-  /* ── ナビゲーション項目（site.md と同期） ── */
+  /* ── ナビゲーション項目 ── */
   var NAV_ITEMS = [
     { text: '活動内容',       href: 'content.html' },
     { text: '活動実績',       href: 'achievement.html' },
@@ -21,20 +21,27 @@
     { text: 'お問い合わせ',    href: 'contact.html' }
   ];
 
-  /* ── SNSリンク（site.md と同期） ── */
+  /* ── SNSリンク ── */
   var SNS_LINKS = [
     { url: 'https://instagram.com/kigyo.toshi', icon: 'img/instagram.png', alt: 'Instagram' },
     { url: 'https://x.com/kigyo_toshi',         icon: 'img/twitter.png',   alt: 'X (Twitter)' },
     { url: 'https://note.com/kigyo_toshi',       icon: 'img/note.png',      alt: 'note' }
   ];
 
-  var COPYRIGHT = '© 2023-2026 Startup and Investment Project. All Rights Reserved.';
+  var COPYRIGHT = '© 2023–' + new Date().getFullYear() + ' Startup and Investment Project. All Rights Reserved.';
 
   /* ── ヘルパー ── */
+  function currentPage() {
+    var page = window.location.pathname.split('/').pop();
+    return page || 'index.html';
+  }
+
   function navListHTML(cls) {
-    return '<ul class="' + cls + '">' +
+    var className = cls ? ' class="' + cls + '"' : '';
+    return '<ul' + className + '>' +
       NAV_ITEMS.map(function (item) {
-        return '<li><a href="' + item.href + '">' + item.text + '</a></li>';
+        var current = currentPage() === item.href ? ' aria-current="page"' : '';
+        return '<li><a href="' + item.href + '"' + current + '>' + item.text + '</a></li>';
       }).join('\n') +
       '</ul>';
   }
@@ -42,7 +49,7 @@
   function snsListHTML(cls) {
     return '<ul class="' + cls + '">' +
       SNS_LINKS.map(function (item) {
-        return '<li><a href="' + item.url + '"><img src="' + item.icon + '" alt="' + item.alt + '"></a></li>';
+        return '<li><a href="' + item.url + '" target="_blank" rel="noopener noreferrer"><img src="' + item.icon + '" alt="' + item.alt + '"></a></li>';
       }).join('\n') +
       '</ul>';
   }
@@ -50,20 +57,20 @@
   /* ── ヘッダー生成 ── */
   function renderHeader() {
     return '' +
-      '<!-- Desktop header (≥1400px / 1068–1399px) -->' +
+      '<!-- Desktop header (≥1400px) -->' +
       '<section class="header-1200">' +
         '<a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>' +
         navListHTML('bar') +
         snsListHTML('sns') +
       '</section>' +
 
-      '<!-- Mobile header (<1068px) -->' +
+      '<!-- Compact header (<1400px) -->' +
       '<section class="header-768">' +
         '<a href="index.html"><img src="img/logo.svg" alt="ロゴ" class="logo"></a>' +
         '<div class="nav">' +
-          '<input id="drawer_input" class="drawer_hidden" type="checkbox">' +
+          '<input id="drawer_input" class="drawer_hidden" type="checkbox" aria-label="メニューを開閉" aria-controls="mobile-navigation" aria-expanded="false">' +
           '<label for="drawer_input" class="drawer_open"><span></span></label>' +
-          '<nav class="nav_content">' +
+          '<nav id="mobile-navigation" class="nav_content" aria-hidden="true">' +
             navListHTML('bar') +
             '<div class="p"><p>' + COPYRIGHT + '</p></div>' +
           '</nav>' +
@@ -94,5 +101,33 @@
 
     if (header) header.innerHTML = renderHeader();
     if (footer) footer.innerHTML = renderFooter();
+
+    var drawer = document.getElementById('drawer_input');
+    var mobileNav = document.getElementById('mobile-navigation');
+
+    if (!drawer || !mobileNav) return;
+
+    function syncDrawerState() {
+      var isOpen = drawer.checked;
+      drawer.setAttribute('aria-expanded', String(isOpen));
+      mobileNav.setAttribute('aria-hidden', String(!isOpen));
+      mobileNav.inert = !isOpen;
+    }
+
+    drawer.addEventListener('change', syncDrawerState);
+    mobileNav.addEventListener('click', function (event) {
+      if (event.target.closest('a')) {
+        drawer.checked = false;
+        syncDrawerState();
+      }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && drawer.checked) {
+        drawer.checked = false;
+        syncDrawerState();
+        drawer.focus();
+      }
+    });
+    syncDrawerState();
   });
 })();

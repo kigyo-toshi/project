@@ -23,10 +23,6 @@ main p {
   color: #fff;
 }
 
-@media screen and (min-width:1400px) {}
-
-@media screen and (min-width:1068px) and (max-width:1399.98px) {}
-
 @media screen and (max-width:1067.98px) {
   main h1 {
     font-size: 24px;
@@ -40,6 +36,7 @@ main p {
 .c-form {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c-form__item {
@@ -68,7 +65,8 @@ main p {
 }
 
 .c-form__input:focus-visible {
-  outline: green auto 1px;
+  outline: 3px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 2px;
 }
 
 textarea.c-form__input {
@@ -96,6 +94,25 @@ textarea.c-form__input {
   color: #FFF;
   background-color: #1f1f1f;
   border: solid 5px #1f1f1f;
+}
+
+.c-form__submit button:disabled {
+  color: #bdbdbd;
+  background: #3b3b3b;
+  border-color: #3b3b3b;
+  cursor: wait;
+}
+
+.form-intro {
+  width: min(600px, calc(100% - 40px));
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.form-status {
+  min-height: 1.5em;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 @media (min-width: 640px) {
