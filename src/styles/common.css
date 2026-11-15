@@ -90,6 +90,9 @@ a[aria-current="page"] {
   width: 44px;
   height: 44px;
   cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: inherit;
 }
 
 .drawer_open span,
@@ -112,20 +115,20 @@ a[aria-current="page"] {
   transform: translateY(10px);
 }
 
-#drawer_input:focus-visible ~ .drawer_open {
+.drawer_open:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.75);
   outline-offset: 2px;
 }
 
-#drawer_input:checked ~ .drawer_open span {
+.drawer_open[aria-expanded="true"] span {
   background: transparent;
 }
 
-#drawer_input:checked ~ .drawer_open span::before {
+.drawer_open[aria-expanded="true"] span::before {
   transform: rotate(45deg);
 }
 
-#drawer_input:checked ~ .drawer_open span::after {
+.drawer_open[aria-expanded="true"] span::after {
   transform: rotate(-45deg);
 }
 
@@ -142,9 +145,10 @@ a[aria-current="page"] {
   box-shadow: -16px 20px 40px rgba(0, 0, 0, 0.35);
   transform: translateX(105%);
   transition: transform 0.25s ease;
+  overflow-y: auto;
 }
 
-#drawer_input:checked ~ .nav_content {
+.drawer_open[aria-expanded="true"] ~ .nav_content {
   transform: translateX(0);
 }
 

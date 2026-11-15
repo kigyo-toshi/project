@@ -8,54 +8,18 @@
   <meta property="og:title" content="早稲田大学高等学院「起業・投資プロジェクト」">
   <meta property="og:description" content="学院生が起業や投資を学び、実践する機会をつくる公認団体です。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kigyo-toshi.github.io/project/">
-  <meta property="og:image" content="https://kigyo-toshi.github.io/project/img/logo-aikon.svg">
+  <meta property="og:url" content="%SITE_URL%/">
+  <meta property="og:image" content="%SITE_URL%/img/logo-aikon.svg">
   <meta property="og:site_name" content="早稲田大学高等学院「起業・投資プロジェクト」">
   <meta property="og:locale" content="ja_JP">
   <meta name="google-site-verification" content="TbRqn5v3PvmMSv26dK8JDknLanCMCCtT52aArHqAwNM">
-  <link rel="canonical" href="https://kigyo-toshi.github.io/project/">
-  <link rel="icon" href="img/logo-aikon.svg" type="image/svg+xml">
-  <link rel="preload" href="img/firstview.png" as="image">
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="canonical" href="%SITE_URL%/">
+  <link rel="icon" href="%BASE_URL%img/logo-aikon.svg" type="image/svg+xml">
+  <link rel="preload" href="%BASE_URL%img/firstview.png" as="image">
 </head>
 <body>
-  <header id="site-header"></header>
-  <main>
-    <h1 class="visually-hidden">早稲田大学高等学院「起業・投資プロジェクト」</h1>
-    <div class="firstview-wrap">
-      <img src="img/firstview.png" alt="" class="firstview" id="js-firstview" fetchpriority="high">
-    </div>
-    <section>
-      <h2>About</h2>
-      <p>早稲田大学高等学院公認団体「起業・投資プロジェクト」。学院に経済教育を根付かせるために活動中。</p>
-    </section>
-    <section>
-      <h2>Vision</h2>
-      <p>テクノロジーの飛躍的な発展や社会問題の深刻化によって収入の得方は変化を続けてきた。政府は方針としてスタートアップの育成、「貯蓄から投資」などの具体策を掲げている。このような背景からわかるように、経済教育の必要性は高まりつつある。</p>
-      <p>本プロジェクトでは、起業・投資に関心のある学院生が集まり、ビジネスプランコンテストに向けての活動や、投資の知識と実践的スキルを得る活動を行う。それにより、社会に出てからも応用可能な経済スキルの習得ができる環境を作ることを目標としている。また、起業・投資の魅力を伝えるイベントや、活動内容を公開することで、個人では中々手が出ず、身近でない起業・投資を身近で触れやすいものにすることも我々が目指すプロジェクトの形である。</p>
-    </section>
-    <section>
-      <h2>活動報告</h2>
-      <p>メンバーが活動報告を書いています。</p>
-      <a href="https://note.com/kigyo_toshi/" target="_blank" rel="noopener noreferrer">noteで活動報告を見る</a>
-    </section>
-    <section>
-      <h2>現在メンバー募集中</h2>
-      <p>起業・投資プロジェクトのメンバーとして共に活動していく学院生を募集しています。</p>
-      <a href="contact.html">お問い合わせはこちら</a>
-    </section>
-  </main>
-  <footer id="site-footer"></footer>
-  <script src="components.js"></script>
-  <script>
-    const firstView = document.getElementById("js-firstview");
-    const revealFirstView = () => firstView.classList.add("loaded");
-    if (firstView.complete) {
-      revealFirstView();
-    } else {
-      firstView.addEventListener("load", revealFirstView, { once: true });
-    }
-  </script>
+  <div id="root"></div>
+  <noscript>このサイトの表示にはJavaScriptが必要です。お問い合わせ: kigyo.toshi@gmail.com</noscript>
+  <script type="module" src="/src/entries/index.jsx"></script>
 </body>
 </html>

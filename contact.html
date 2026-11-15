@@ -8,44 +8,16 @@
   <meta property="og:title" content="お問い合わせ | 起業・投資プロジェクト">
   <meta property="og:description" content="起業・投資プロジェクトへのお問い合わせはこちらから。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kigyo-toshi.github.io/project/contact.html">
-  <meta property="og:image" content="https://kigyo-toshi.github.io/project/img/logo-aikon.svg">
+  <meta property="og:url" content="%SITE_URL%/contact.html">
+  <meta property="og:image" content="%SITE_URL%/img/logo-aikon.svg">
   <meta property="og:site_name" content="早稲田大学高等学院「起業・投資プロジェクト」">
   <meta property="og:locale" content="ja_JP">
-  <link rel="canonical" href="https://kigyo-toshi.github.io/project/contact.html">
-  <link rel="icon" href="img/logo-aikon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="canonical" href="%SITE_URL%/contact.html">
+  <link rel="icon" href="%BASE_URL%img/logo-aikon.svg" type="image/svg+xml">
 </head>
 <body>
-  <header id="site-header"></header>
-  <main>
-    <h1>お問い合わせ</h1>
-    <p class="form-intro">お問い合わせはこちらからお願いします。</p>
-    <form class="c-form" id="contact-form"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSdjCXfZbz62TNXXf_cgJSjrhryntMB-0T3Iu9_AHs3obZlBdg/formResponse"
-      method="post" target="hidden_iframe">
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-name">お名前</label>
-        <input name="entry.1706845888" class="c-form__input" id="field-name" placeholder="お名前" type="text" autocomplete="name" required>
-      </div>
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-mail">メールアドレス</label>
-        <input name="entry.127583046" class="c-form__input" id="field-mail" placeholder="name@example.com" type="email" inputmode="email" autocomplete="email" required>
-      </div>
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-message">メッセージ内容</label>
-        <textarea name="entry.1469060305" class="c-form__input" id="field-message" placeholder="お問い合わせ内容"></textarea>
-      </div>
-      <div class="c-form__submit">
-        <button type="submit">送信する</button>
-      </div>
-      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-    </form>
-    <iframe name="hidden_iframe" id="hidden_iframe" title="お問い合わせ送信用の非表示フレーム" hidden></iframe>
-  </main>
-  <footer id="site-footer"></footer>
-  <script src="components.js"></script>
-  <script src="script.js"></script>
+  <div id="root"></div>
+  <noscript>このサイトの表示にはJavaScriptが必要です。お問い合わせ: kigyo.toshi@gmail.com</noscript>
+  <script type="module" src="/src/entries/contact.jsx"></script>
 </body>
 </html>
