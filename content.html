@@ -8,57 +8,16 @@
   <meta property="og:title" content="活動内容 | 起業・投資プロジェクト">
   <meta property="og:description" content="起業・投資プロジェクトの活動内容を紹介します。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kigyo-toshi.github.io/project/content.html">
-  <meta property="og:image" content="https://kigyo-toshi.github.io/project/img/logo-aikon.svg">
+  <meta property="og:url" content="%SITE_URL%/content.html">
+  <meta property="og:image" content="%SITE_URL%/img/logo-aikon.svg">
   <meta property="og:site_name" content="早稲田大学高等学院「起業・投資プロジェクト」">
   <meta property="og:locale" content="ja_JP">
-  <link rel="canonical" href="https://kigyo-toshi.github.io/project/content.html">
-  <link rel="icon" href="img/logo-aikon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="content.css">
-  <link rel="stylesheet" href="accordion.css">
+  <link rel="canonical" href="%SITE_URL%/content.html">
+  <link rel="icon" href="%BASE_URL%img/logo-aikon.svg" type="image/svg+xml">
 </head>
 <body>
-  <header id="site-header"></header>
-  <main>
-    <h1>活動内容</h1>
-    <div class="accordion" role="list">
-      <div class="accordion-item" role="listitem">
-        <button type="button" id="acc-btn-1" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-1">
-          1　ビジネスプラン構築を通じたスタートアップスキル習得
-        </button>
-        <div id="acc-panel-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" hidden>
-          ビジネスプランの作成を通じて、起業に必要なスキルを身につけます。
-        </div>
-      </div>
-      <div class="accordion-item" role="listitem">
-        <button type="button" id="acc-btn-2" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-2">
-          2　企業訪問
-        </button>
-        <div id="acc-panel-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" hidden>
-          OBの協力を得て、企業訪問を実施します。
-        </div>
-      </div>
-      <div class="accordion-item" role="listitem">
-        <button type="button" id="acc-btn-3" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-3">
-          3　学院生に向けたイベントの開催
-        </button>
-        <div id="acc-panel-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" hidden>
-          学院生向けのイベントを企画・運営します。
-        </div>
-      </div>
-      <div class="accordion-item" role="listitem">
-        <button type="button" id="acc-btn-4" class="accordion-btn" aria-expanded="false" aria-controls="acc-panel-4">
-          4　コンテスト・大会への出場
-        </button>
-        <div id="acc-panel-4" class="accordion-content" role="region" aria-labelledby="acc-btn-4" hidden>
-          世界中の同世代の高校生と競い合います。また、専門家によるフィードバックを得ることで、自身のビジネスプランを定期的に客観視できます。
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer id="site-footer"></footer>
-  <script src="components.js"></script>
-  <script src="accordion.js"></script>
+  <div id="root"></div>
+  <noscript>このサイトの表示にはJavaScriptが必要です。お問い合わせ: kigyo.toshi@gmail.com</noscript>
+  <script type="module" src="/src/entries/content.jsx"></script>
 </body>
 </html>

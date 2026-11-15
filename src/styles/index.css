@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 main {
-  padding-top: 70px;
+  padding-top: var(--header-compact-height);
   padding-bottom: 80px;
   color: #fff;
   background: #2f2f2f;
@@ -31,7 +31,7 @@ main {
   display: block;
   width: 100%;
   height: auto;
-  opacity: 0;
+  opacity: 1;
 }
 
 .firstview.loaded {
@@ -89,6 +89,10 @@ main a:focus-visible {
 @keyframes shimmer-slide {
   from { transform: translateX(-100%); }
   to { transform: translateX(100%); }
+}
+
+@media (min-width: 1400px) {
+  main { padding-top: var(--header-desktop-height); }
 }
 
 @keyframes firstview-in {
